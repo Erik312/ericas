@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>MetaPhysicalRealm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: #4B0082 ;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #4B0082;
+    font-size: 50px;
+  }
+  .logo {
+    color: #4B0082;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #4B0082;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #4B0082;
+    background-color: #fff !important;
+    color: #4B0082;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #9400D3 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #4B0082;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #4B0082 ;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #4B0082 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  #button1, #button2, #button3{
+    color: white;
+    background-color: #4B0082;
+  }
+  #button1:hover, #button2:hover, #button3:hover{
+    border-radius: 3px;
+    background-color: white; 
+    color: #4B0082;
+    
+    
+  }
+  #services {
+    background-color:;
+    padding-bottom: 10%;
+  }
+  #bowls {
+    border-radius: 5px;
+    border: solid #4B0082;
+  }
+
+  #meds {
+    border-radius: 5px;
+    border: solid #4B0082;
+  }
+  #disclaimer1 {
+    font-size: 0.85em;
+  }
+  #linkb {
+    background-color:white;
+    color: #4B0082;
+    border-radius: 7px; 
+    border:solid gray;
+  }
+  #linkb:hover {
+    background-color:green;
+    color:white; 
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4B0082;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+
+        
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>MetaPhysical Realm Healings</h1>
+  <p>Call for appointment</p>
+  <p>or</p>
+  <button id="linkb" onclick="window.location.href='https://calendly.com/metaphysicalrealm1327';" >Book Session Online!</button>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Metaphysical Realm</h2><br>
+      <h4>Metaphysical Realm was created with the sole intention to spread love,
+        light, wisdom and spiritual healing as a collective and on an individual level.
+        Energy healing is a holistic practice that activates the bodies energy systems to remove blockages, cleanse, restore and bring forth balance and alignment to the bodies chakra system.By cleansing and releasing through these energetic blocks, the body’s inherent ability to heal itself is stimulated. Energy healing can promote health and well-being, helps with pain management, encourages mental clarity, release from stress and tension, relieves depression, reduces anxiety, aids relaxation and improves sleep.
+
+        <br>
+        <br>
+        Bless it be,<br>
+         E.</h4><br>
+      <!--<h4>We go above and beyond to make sure our clients are provided with the best reiki practioners. Erica, the realms reiki master
+      has several years performing healing sessions in the San Gabriel Valley. She has the experience neccesary to provide breathtaking spiritual
+       healings.  </h4> -->
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <img id="bowls" class="img-responsive" src="images/bowls.jpg" alt="bed">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center bg-grey">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-eye-open logo-small"></span>
+      <h4>Spiritual Guidance/Development </h4>
+      <button id="button1" data-toggle="modal" data-target="#project1">Click me!</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-grain logo-small"></span>
+      <h4>Reiki</h4>
+      <button id="button2" data-toggle="modal" data-target="#project2">Click me!</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Metatronia Therapy</h4>
+      <button id="button3" data-toggle="modal" data-target="#project3">Click me!</button>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-sm-4">
+      <img id="meds" class="img-responsive" src="images/med1.jpg" alt="">
+    </div>
+    <div class="col-sm-8">
+      <!--<h2>Our Values</h2><br>-->
+      <h2 ><strong>What to expect</strong> </h2>
+      
+      
+      
+      <p>Reiki and Metatronia therapy can provide a beautiful and powerful healing session.The entire system mind, body and soul is cleansed, grounded and rebalanced allowing us to live in a vessel that is functioning at its optimum level. The healing is painless, very soothing and extremely relaxing, aligning your blueprint, repairing your DNA and healing the Auric field, raising your vibration to a higher level allowing for healing to take place on many levels. Most importantly expect absolutely nothing! It is vital that you enter your healing with absolutely no expectations trusting in the Divine. Allowing your healing to occur exactly how its supposed to fully trusting in the divine with no resistance. 
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Container (Pricing Section) -->
+<!--<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+
+  </div>
+  <div class="row slideanim">
+
+
+    <div class="col-sm-12 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1></h1>
+        </div>
+        <div class="panel-body">
+          <h3><strong>Cost per 1 hour session</strong></h3>
+
+
+        </div>
+        <div class="panel-footer">
+          <h3>$70</h3>
+          <h4></h4>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+    <div class="col-sm-12 text-center">
+      <p>Have question's prior to booking an appointment? Contact to schedule a free consultation. </p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Buddhamouse Emporium: 134 Yale Avenue, Claremont, CA 91711</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Call for appointment: +1 (626) 733-5721</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Metaphysicalrealm1327@gmail.com</p>
+      <span class="glyphicon glyphicon-calendar"></span><a href="https://calendly.com/metaphysicalrealm1327">Calendly: Metaphysical Realm</a>
+    </div>
+  </div>
+
+  
+</div>
+
+
+<div id="disclaimer" class="container-fluid">
+  <h2 class="text-center">Disclaimer</h2>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p id="disclaimer1"> Metatronia Therapy® is a Holistic and Complementary energy Therapy that works alongside and integrates naturally with any Medical Treatment. It is not a substitute for any medical treatment already being received. 
+      The techniques used/advice, guidance applied or taught by the Metatronia Foundation of Light (MTFOL) are intended to assist with vibrational alignment and healing within the human body/vessel and energy systems and that they make no claims for cure of disease/illness/disharmony.
+      Metatronia Therapy® is here to assist in energetic/vibrational alignment within the human body/vessel, reduce stress, enhance health & well-being. 
+       Metatronia Therapy® Practitioner is NOT a Doctor or medical professional and therefore the Healing treatment/Therapy/Attunements/Education & products that may be provided by the Metatronia Therapy® Practitioner are not a substitute for Proper Medical Care. I understand that the Metatronia Therapy® Practitioner does not diagnose, treat, or cure any disease or physical condition. 
+      Metatronia Foundation of Light and Metatronia Therapy® Practitioner makes no claims or promises about the effectiveness of the therapy or products on offer, nor will I hold the Metatronia Therapy® Practitioner or MTFOL responsible for any results that are suggested through healing therapy/attunements or products that I choose to purchase. <br>
+      <strong>Cancelation Policy-  Refunds are granted up to 72 hours before your session. You can reschedule up to 24 hours before your session.</strong>
+    </p>
+    <div class="row">
+    <div class="col-sm-4"><img class="img-responsive" src="images/iseal.jpg"></div>
+    <div class="col-sm-4"><img class="img-responsive" src="images/iphm.jpg"></div>
+    <div class="col-sm-4"><img class="img-responsive" src="images/imember.jpg"></div>
+    </div>
+    </div>
+  </div>
+  
+
+
+
+</div>
+
+
+<footer class="container-fluid text-center bg-grey">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Developed By RDG® <a href="" title=""></a></p>
+</footer>
+
+
+<!-- Modal -->
+    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Spiritual Guidance</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/23.jpg">
+                    Providing guidance and development to help your inner spirit find its path!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Reiki</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/wg.jpg">
+                    Reiki is a simple yet powerful healing technique that works to balance the energy system of the body. It has been scientifically proven that when the life force energy within the body is balanced, this can lead to improved health and well-being.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Metatronia Therapy</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/33.jpg" >
+                    Metatronia Therapy Provides an accelerated ascension and awakening journey.  Metatronia therapy Is here to assist and accelerate the ascension journey and is available now to help those who are ready to step fully into their light, their true divine essence. Metatron works with each individual uniquely to bring each person where they need to be on their soul’s path for their highest good.  He uses different sacred geometric shapes and divine light codings and colors for each person’s unique coding/makeup. Metatronia Therapy® is more than energy healing.  It aligns one back to their divine imprint, their true essence.  Metatronia Therapy® works on healing the ego/separated mind and aligning it back to the Divine Mind (Cosmic Consciousness) & Universal Heart.  It accelerates energy realignment and raises one’s frequency/vibration/consciousness. Metatronia Therapy® deepens the connection and awareness of the light-body (Merkahba) .  Metatronia Therapy® triggers an amazing journey of self-discovery and soul alignment. 
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+</script>
+
+</body>
+</html>
